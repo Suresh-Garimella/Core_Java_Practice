@@ -1,3 +1,5 @@
+package OOps_concepts;
+
 public abstract class Department {
     abstract int getDepartmentSize();
 }

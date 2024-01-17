@@ -1,3 +1,5 @@
+package OOps_concepts;
+
 class Student {
 
     private String name;
@@ -34,7 +36,7 @@ class Student {
         System.out.println(biscuit.getPrice(2));
         System.out.println("get the value of 2 biscuits using the overloaded getter");
 
-        OverrideClass obj = new Child();
+        Child obj = new Child();
         obj.printFunction();
 
     }
