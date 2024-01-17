@@ -1,3 +1,5 @@
+package OOps_concepts;
+
 class Product {
     private Double price;
 

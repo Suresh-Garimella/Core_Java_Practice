@@ -12,15 +12,18 @@ public class ReverseDigit {
     }
 
     int usingLoop(int num) {
-        String output = "";
+        int output = 0;
+        // 54321
         while (num != 0) {
             int temp = num % 10;
             num = num / 10;
             // System.out.println(num);
+
             output += temp;
+            output *= 10;
         }
 
-        return Integer.parseInt(output);
+        return output / 10;
     }
 
     public static void main(String[] args) {

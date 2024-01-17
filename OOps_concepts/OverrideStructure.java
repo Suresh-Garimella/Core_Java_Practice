@@ -1,7 +1,10 @@
+package OOps_concepts;
+
 class OverrideStructure {
     void printFunction() {
         System.out.println("Print Function inside Parent Class");
     }
+
 }
 
 class Child extends OverrideStructure {
@@ -13,9 +16,4 @@ class Child extends OverrideStructure {
         System.out.println("Print Function inside Child Class");
     }
 
-    public static void main(String[] args) {
-
-        OverrideStucture obj = new Child();
-        obj.printFunction();
-    }
 }
