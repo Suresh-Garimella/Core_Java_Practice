@@ -1,4 +1,4 @@
-package OOps_concepts;
+package oops_concepts;
 
 class OverrideStructure {
     void printFunction() {
