@@ -13,6 +13,7 @@ public class ageDiscriminator {
         int age;
         Scanner sc = new Scanner(System.in);
         age = sc.nextInt();
+        sc.close();
         if (age >= 13 && age <= 19) {
             System.out.println("The Person is a Teen");
         } else if (age < 13 && age > 0)
