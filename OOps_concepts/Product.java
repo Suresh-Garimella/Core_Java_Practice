@@ -1,4 +1,4 @@
-package OOps_concepts;
+package oops_concepts;
 
 class Product {
     private Double price;
