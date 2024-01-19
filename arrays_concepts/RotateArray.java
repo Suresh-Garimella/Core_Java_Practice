@@ -41,6 +41,9 @@ public class RotateArray {
 
     }
 
+    // void rotateUsingoneForLoop(int[] arr, int x, int n) {
+    // }
+
     // 1 2 3 4
     // x=2
     // 3 4 1 2
