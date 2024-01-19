@@ -63,6 +63,9 @@ public class Person {
 
         System.out.println(obj == obj2);
 
+        Person kk = obj1;
+        System.out.println(kk == obj1);
+
     }
 
     public void checkSsn(Person o) {
