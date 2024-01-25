@@ -1,3 +1,5 @@
+package String_functionTest;
+
 import org.junit.Assert;
 import org.junit.Test;
 import string_functions.AnagramCheck;

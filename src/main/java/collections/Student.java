@@ -17,11 +17,18 @@ public class Student {
         return gpa;
     }
 
-    private final String firstName;
-    private final String lastName;
-    private final float gpa;
+    private  String firstName;
+    private  String lastName;
+    private  float gpa;
+    public static ArrayList<Student> studentArrayList= new ArrayList<>();
 
-    Student(String firstName,String lastName, float gpa){
+//    public static void addStudent(ArrayList<Student> studentarr) {
+//        studentArrayList=(studentarr);
+//    }
+
+//    public Student(){}
+
+    public Student(String firstName, String lastName, float gpa){
         this.firstName = firstName;
         this.lastName = lastName;
         this.gpa = gpa;
@@ -32,14 +39,14 @@ public class Student {
         return this.getFirstName()+" "+this.getLastName()+" "+this.getGpa();
     }
 
-    static void display(ArrayList<Student> arrayList){
-        for (Student obj: arrayList
+    public static void display(){
+        for (Student obj: studentArrayList
              ) {
             System.out.println(obj);
         }
     }
 
-    static ArrayList<Student> belowAverageStudents(ArrayList<Student> arrayList){
+    public static ArrayList<Student> belowAverageStudents(ArrayList<Student> arrayList){
         float avg = 0.0f;
         float sum=0;
         for(Student obj :arrayList){
@@ -47,29 +54,40 @@ public class Student {
         }
         avg= sum/arrayList.size();
         ArrayList<Student> newArrayList = new ArrayList<>();
+        System.out.println(avg);
+        System.out.println(sum);
         for (Student obj: arrayList
              ) {
-            if(obj.getGpa()<avg){
+            if(obj.getGpa()>avg){
                 newArrayList.add(obj);
             }
         }
         return newArrayList;
     }
 
-    public static void main(String[] args) {
-        Student obj1 = new Student("Suresh","Garimella",2.5f);
-        Student obj2 = new Student("Manoj","Pusala",4.0f);
-        Student obj3 = new Student("Prashanth","Bokkala",3.7f);
-        Student obj4 = new Student("Madhan","Mandadi",3.0f);
-        ArrayList<Student> arrayList = new ArrayList<>(Arrays.asList(obj1,obj2,obj3,obj4));
-        System.out.println("Printing the Student ArrayList");
-        Student.display(arrayList);
-//        System.out.println(obj1);
-        System.out.println("--------------------------");
-        ArrayList<Student> belowAvgStudents =Student.belowAverageStudents(arrayList);
-        System.out.println("Printing the below average Students :");
-        Student.display(belowAvgStudents);
-    }
+//    public static void main(String[] args) {
+//        Student obj1 = new Student("Suresh","Garimella",2.5f);
+//        Student obj2 = new Student("Manoj","Pusala",4.0f);
+//        Student obj3 = new Student("Prashanth","Bokkala",3.7f);
+//        Student obj4 = new Student("Madhan","Mandadi",3.0f);
+//        ArrayList<Student>  arr = new ArrayList<>();
+//        Student.studentArrayList=arr;
+//        Student.addStudent(arr);
+//        Student.display();
+//        ArrayList<Student> arr1=Student.belowAverageStudents(arr);
+//        ArrayList<Student> arr2=new ArrayList<>();
+//        arr2.add(obj3);
+//        arr2.add(obj4);
 
+//        Student.arrayList.addAll(Arrays.asList(obj1,obj2,obj3,obj4));
+////        ArrayList<Student> arrayList = new ArrayList<>(Arrays.asList(obj1,obj2,obj3,obj4));
+//        System.out.println("Printing the Student ArrayList");
+//        display(Student.arrayList);
+////        System.out.println(obj1);
+//        System.out.println("--------------------------");
+//        ArrayList<Student> belowAvgStudents =Student.belowAverageStudents(arrayList);
+//        System.out.println("Printing the below average Students :");
+//        Student.display(belowAvgStudents);
+//    }
 
 }
