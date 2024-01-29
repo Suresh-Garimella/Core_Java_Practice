@@ -1,12 +1,15 @@
 package collectionsTest;
 import collections.Student;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class StudentTest {
+
+
 
     @Test
     public void Test1() {

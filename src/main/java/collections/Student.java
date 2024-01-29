@@ -54,8 +54,8 @@ public class Student {
         }
         avg= sum/arrayList.size();
         ArrayList<Student> newArrayList = new ArrayList<>();
-        System.out.println(avg);
-        System.out.println(sum);
+//        System.out.println(avg);
+//        System.out.println(sum);
         for (Student obj: arrayList
              ) {
             if(obj.getGpa()>avg){

@@ -4,6 +4,30 @@ import java.util.Scanner;
 
 public class RelativeOrder {
 
+    static int[] movingZerosToEnd(int[] arr){
+        System.out.println("Function....");
+        int i=0,j=arr.length-1;
+        while(i<j){
+            if(arr[j]==0){
+                j--;
+            }
+            if(arr[i]==0){
+                arr[i]=arr[j];
+                arr[j]=0;
+                i++;
+                j--;
+            }
+            else{
+                i++;
+            }
+        }
+
+        for (int idx:arr
+             ) {
+            System.out.println(" "+idx);
+        }
+        return arr;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Size of the Array :");
@@ -15,6 +39,8 @@ public class RelativeOrder {
         }
 
         sc.close();
+
+        RelativeOrder.movingZerosToEnd(arr);
         int outArr[] = new int[n];
         int idx = 0;
         for (int i : arr) {
