@@ -3,22 +3,51 @@ package junitprograms;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import java.util.Arrays;
+
+import static org.junit.Assert.*;
 
 public class RepeatCharactersTest  {
     @Test
     public void trueCase(){
-        assertEquals(new char[]{'s'},RepeatCharacters.repeatCharacters("suresh"));
+        char[] ch=new char[]{'s','b','u'};
+        char[] c=RepeatCharacters.repeatCharacters("suresh babu");
+        /*
+        for (char i:c
+             ) {
+            System.out.println(i);
+        }
+        for (char i:ch
+        ) {
+            System.out.println(i);
+        }
+        see the below testcase to under the assertArrayEquals
+         */
+        System.out.println(Arrays.equals(c,ch));
+        assertTrue(Arrays.equals(c,ch));
     }
 
     @Test
-    public void zeroFactorial(){
-        assertEquals(1,Factorial.fact(0));
+    public void emptyString(){
+
+//        char[] c=RepeatCharacters.repeatCharacters("");
+//        for (char i:c
+//        ) {
+//            System.out.println(i);
+//        }
+        assertArrayEquals(new char[]{},RepeatCharacters.repeatCharacters(""));
     }
 
     @Test
     public void falseCase(){
-        assertNotEquals(100,Factorial.fact(5));
+//        char[] c=RepeatCharacters.repeatCharacters("suresh babu");
+//        for (char i:c
+//        ) {
+//            System.out.println(i);
+//        }
+//        assert();
+        assert !Arrays.equals(new char[]{'s','u'},RepeatCharacters.repeatCharacters("suresh babu")) : "Arrays are equal!";
+
+        System.out.println("Arrays are not equal.");
     }
 }
