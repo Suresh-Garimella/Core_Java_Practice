@@ -6,7 +6,7 @@ public class StringToInt   {
 
     public static Integer convertStringToInt(String str) throws NumberFormatException {
 
-            return Integer.parseInt(str);
+            return Integer.parseInt(str); 
     }
 
 //    public static void main(String[] args) {
