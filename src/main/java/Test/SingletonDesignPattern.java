@@ -20,7 +20,9 @@ public class SingletonDesignPattern {
     return obj;
   }
     public static void main(String[] args) {
-        SingletonDesignPattern ob= new SingletonDesignPattern();
+      //we need to Synchroize Keyword
+      SingletonDesignPattern ob= new SingletonDesignPattern();
+
         System.out.println("");
         String[] arr= new String[]{"a","b","c"};
         Stream<String> stream= Arrays.stream(arr);
