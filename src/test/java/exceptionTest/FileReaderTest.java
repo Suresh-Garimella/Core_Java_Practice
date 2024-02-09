@@ -8,7 +8,7 @@ public class FileReaderTest {
     FileReader fileReader = new FileReader();
     @Test
     public void testFileReader() {
-        String output = fileReader.readFile("C:\\Users\\anjur\\Downloads\\Java\\CoreJava\\src\\main\\resources\\Data.txt");
+        String output = fileReader.readFile("C:\\Users\\suresh\\Downloads\\Java\\CoreJava\\src\\main\\resources\\Data.txt");
         Assert.assertEquals("HelloI am Siva Sai", output);
     }
     @Test
